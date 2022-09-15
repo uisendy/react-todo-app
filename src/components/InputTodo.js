@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FaArrowAltCircleRight } from 'react-icons/fa';
 
 export class InputTodo extends Component {
   constructor(props) {
@@ -29,7 +30,22 @@ export class InputTodo extends Component {
           placeholder="Add Todo..."
           onChange={(e) => this.onInputChange(e)}
         />
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          style={{
+            border: 'none',
+            outline: 'none',
+            background: 'transparent',
+          }}
+        >
+          <FaArrowAltCircleRight
+            style={{
+              color: 'green',
+              fontSize: '16px',
+              background: 'transparent',
+            }}
+          />
+        </button>
       </form>
     );
   }
